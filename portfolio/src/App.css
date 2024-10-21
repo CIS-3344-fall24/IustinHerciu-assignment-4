@@ -15,6 +15,11 @@ body {
     color: #fff;
 }
 
+.container {
+    margin: 2rem;
+    text-align: center;
+}
+
 .nav {
     background-color: #1f242d;
     color: white;
@@ -52,7 +57,7 @@ body {
     /*text-decoration: none; !* this will get rid of the underline under the elements *!*/
 /*transition: .5s ease;   !* this will slowly change the style of this when you hover over it *!*/
 
-.nav a:hover,
-.nav a.active {
+.nav a.active,
+.nav a:hover {
     color: #0ef;
 }

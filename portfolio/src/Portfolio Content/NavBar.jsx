@@ -10,9 +10,6 @@ export default function NavBar() {
             {/* create list that will include the navbar options. use unordered list */}
             <ul>
                 <li className="active">
-                    <a href="/home">Home</a>
-                </li>
-                <li>
                     <a href="/profile">Profile</a>
                 </li>
                 <li>
@@ -25,7 +22,6 @@ export default function NavBar() {
                     <a href="/contact">Contact</a>
                 </li>
             </ul>
-
         </nav>
     );
 }
