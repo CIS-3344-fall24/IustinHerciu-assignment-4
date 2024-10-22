@@ -5,12 +5,26 @@ import React, { useEffect, useRef } from 'react';
 
 export default function NavBar() {
 
-    // declare and initialize a `section reference` that will act as the tag for the sections of the page
-    // declare and initialize a `link reference` that will act as the tag for all the links in the navigation bar
-    // use `useRef` to initialize the references
+    /**
+     * Declare and initialize an Array to store references to each section of the page
+     * Declare and initialize an Array to store references to each link in the NavBar
+     * Use `useRef` to initialize the references
+     */
     const secRef = useRef([]);
     const linkRef = useRef([]);
 
+    /**
+     * @useEffect -> use it to `synchronize a component with an external system`
+     *
+     */
+    useEffect(() => {
+        /**
+         * Create a function to handle scroll events and highlight the correct navbar link
+         */
+        const handleScrolling = () => {
+            const top = window.scrollY;     // Get the position of the current vertical scroll
+        }
+    }, []);
     return (
         <nav className="navbar">
 
