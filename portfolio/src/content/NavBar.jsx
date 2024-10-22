@@ -1,5 +1,4 @@
 // This page will include the Navigation Bar
-// Make sure to export this to `App.jsx`
 
 export default function NavBar() {
     return (
@@ -41,3 +40,4 @@ export default function NavBar() {
         </nav>
     );
 }
+
