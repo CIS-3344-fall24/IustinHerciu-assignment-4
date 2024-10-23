@@ -1,3 +1,14 @@
 export default function Contact() {
-    return <h1>eert</h1>
+    return (
+        <section className="contact" id="contact">
+            <h2 className="heading">Contact <span>ME</span></h2>
+
+            <form action="#">
+                <div className="input-box">
+                    <input type={"text"} placeholder={"Full Name"} />
+                    <input type={"email"} placeholder={"Email Address"} />
+                </div>
+            </form>
+        </section>
+    );
 }
