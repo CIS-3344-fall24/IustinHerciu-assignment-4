@@ -14,6 +14,12 @@ export default function Profile() {
             backDelay: 100,     // Delay before typing the 2nd string
             loop: true          // Loop the typing animation forever
         });
+
+        // Cleanup the Typed instance on component unmount
+        // Use `.destroy()` to destroy the Typed.js instance
+        return () => {
+            typed.destroy();
+        };
     })
 
     return (
