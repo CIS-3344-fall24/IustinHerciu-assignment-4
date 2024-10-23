@@ -23,6 +23,23 @@ export default function NavBar() {
          */
         const handleScrolling = () => {
             const top = window.scrollY;     // Get the position of the current vertical scroll
+
+            /**
+             * Loop through each section to check which one is in view
+             *
+             * @section: represents each individual section of your webpage that you want to track
+             * @index: the position of the current section in the array
+             */
+            secRef.current.forEach((section, index) => {
+                const offset = section.offsetTop - 150;
+                const height = section.offsetHeight;
+
+                // If the current scroll position is within the section, highlight the corresponding link
+                if (top >= offset && top < offset + height) {
+                    linkRef.current.forEach(link => link.classList.remove('active'));   // Remove active state from all links
+                    linkRef.current[index].classList.add('active');     // Add active state to the current section's link
+                }
+            });
         }
     }, []);
     return (
