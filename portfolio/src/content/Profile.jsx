@@ -1,6 +1,21 @@
 import profilePic from './images/profilePic.png'
+// import `useEffects` and typed.js for text animations
+import React, {useEffect} from "react";
+import Typed from "typed.js";
 
 export default function Profile() {
+
+    // use `useEffect` to create typing animation
+    useEffect(() => {
+        const typed = new Typed('.multiple-text', {
+            strings: ['College Student at Temple University', 'Entry-Level Software Developer'],
+            typeSpeed: 100,     // How fast the text is typed
+            backSpeed: 100,     // How fast the text is erased
+            backDelay: 100,     // Delay before typing the 2nd string
+            loop: true          // Loop the typing animation forever
+        });
+    })
+
     return (
         <section className="home">
             <div className="home-content">
