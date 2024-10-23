@@ -40,6 +40,16 @@ export default function NavBar() {
                     linkRef.current[index].classList.add('active');     // Add active state to the current section's link
                 }
             });
+
+            // Sticky navbar
+            const header = document.querySelector('.header');
+            // If the page is scrolled more than 100 pixels vertically, the 'sticky' class is added.
+            // Otherwise, the 'sticky' class is removed.
+            header.classList.toggle('sticky', window.scrollY > 100);
+
+
+
+
         }
     }, []);
     return (
