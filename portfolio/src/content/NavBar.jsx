@@ -1,6 +1,8 @@
 // This page will include the Navigation Bar
 // import `useEffect` and `useRef` to attach and detach event listeners,
 // and to reference DOM elements directly in React.
+// import React Router Link as well for the navbar
+
 import React, { useEffect, useRef } from 'react';
 
 export default function NavBar() {
@@ -62,30 +64,27 @@ export default function NavBar() {
     return (
         <nav className="navbar">
 
-            {/* create list that will include the navbar options. use unordered list */}
             <header className="header">
                 <h1 className="title">Portfolio</h1>
 
+                {/* create list that will include the navbar options. use unordered list */}
+
                 <ul>
                     {/* Store each <li> element in linkRef at the correct index */}
-                    <li ref={element => linkRef.current[0] = element} className="active">
-                        <a href="/profile">Profile</a>
+                    <li className="active">
+                        <a href="#profile">
+                            Profile
+                        </a>
                     </li>
 
-                    <li ref={element => linkRef.current[1] = element}>
-                        <a href="/projects">
+                    <li>
+                        <a href="#projects">
                             Projects
                         </a>
                     </li>
 
-                    <li ref={element => linkRef.current[2] = element}>
-                        <a href="/experience">
-                            Experience
-                        </a>
-                    </li>
-
-                    <li ref={element => linkRef.current[3] = element}>
-                        <a href="/contact">
+                    <li>
+                        <a href="#contact">
                             Contact
                         </a>
                     </li>
