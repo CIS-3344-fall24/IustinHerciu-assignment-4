@@ -55,6 +55,7 @@ export default function NavBar() {
                 window.removeEventListener('scroll', handleScrolling);
             };
         };
+        // console.log(linkRef.current);        // test to see if linkRef works
     }, []);
 
 
@@ -65,27 +66,25 @@ export default function NavBar() {
             <header className="header">
                 <h1 className="title">Portfolio</h1>
 
-
                 <ul>
-                    <li className="active">
-                        <a href="/profile">
-                            Profile
-                        </a>
+                    {/* Store each <li> element in linkRef at the correct index */}
+                    <li ref={element => linkRef.current[0] = element} className="active">
+                        <a href="/profile">Profile</a>
                     </li>
 
-                    <li>
+                    <li ref={element => linkRef.current[1] = element}>
                         <a href="/projects">
                             Projects
                         </a>
                     </li>
 
-                    <li>
+                    <li ref={element => linkRef.current[2] = element}>
                         <a href="/experience">
                             Experience
                         </a>
                     </li>
 
-                    <li>
+                    <li ref={element => linkRef.current[3] = element}>
                         <a href="/contact">
                             Contact
                         </a>
