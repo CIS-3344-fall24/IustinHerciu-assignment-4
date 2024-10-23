@@ -8,6 +8,12 @@ export default function Contact() {
                     <input type={"text"} placeholder={"Full Name"} />
                     <input type={"email"} placeholder={"Email Address"} />
                 </div>
+
+                <div className="input-box">
+                    <input type={"number"} placeholder={"Phone Number"} />
+                    <input type={"text"} placeholder={"Email Subject"} />
+                </div>
+
             </form>
         </section>
     );
