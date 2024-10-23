@@ -47,11 +47,17 @@ export default function NavBar() {
             // Otherwise, the 'sticky' class is removed.
             header.classList.toggle('sticky', window.scrollY > 100);
 
+            // Attach the scroll listener
+            window.addEventListener('scroll', handleScrolling);
 
-
-
-        }
+            // Remove the scroll event listener when the component is unmounted.
+            return () => {
+                window.removeEventListener('scroll', handleScrolling);
+            };
+        };
     }, []);
+
+
     return (
         <nav className="navbar">
 
