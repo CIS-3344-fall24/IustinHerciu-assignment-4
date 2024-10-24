@@ -1,24 +1,36 @@
-import React, { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useRef, useState } from 'react';    // Import hooks from React
+import emailjs from '@emailjs/browser';             // Import emailjs for sending form data via email
 
 export default function Contact() {
+    /**
+     * Create constant that references the form to access its values, and create
+     * another constant that uses State to track if the message was sent successfully
+     */
     const form = useRef();
     const [messageSent, setMessageSent] = useState(false);
 
+    /**
+     * Function that gets triggered when the form is submitted
+     * @param e
+     */
     const sendEmail = (e) => {
-        e.preventDefault();
+        e.preventDefault();     // Prevents the form from being submitted
 
+        // Use emailjs to send the form data to the specified service and template
         emailjs
-            .sendForm('service_ou0q9fi', 'template_yhtcwsz', form.current, {
+            .sendForm(
+                'service_ou0q9fi',
+                'template_yhtcwsz',
+                form.current, {
                 publicKey: 'F5MSoIoySbXe7rrcW',
-            })
+            })      // keys from emailjs
             .then(
                 () => {
-                    setMessageSent(true);
+                    setMessageSent(true);       // Update state to show success message if email is sent
                     console.log('SUCCESS!');
                 },
                 (error) => {
-                    console.log('FAILED...', error.text);
+                    console.log('FAILED...', error.text);   // Log error message if message fails to send
                 },
             );
     };
