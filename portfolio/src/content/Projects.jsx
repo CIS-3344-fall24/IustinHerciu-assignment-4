@@ -44,12 +44,10 @@ export default function Projects() {
                     <i className='bx bx-code-alt'></i>
                     <h3>Knowledge Quiz</h3>
                     <p>
-                        Test your knowledge with our interactive quiz platform!
-                        Dive into exciting quizzes across Physics, Geography, and Architecture to challenge
-                        your understanding and learn something new. Whether you're exploring
-                        the laws of nature, discovering world landmarks, or analyzing architectural marvels,
-                        there's a quiz for every curious mind. Sharpen your skills, track your progress,
-                        and have fun while learning!
+
+                        Test your knowledge with our interactive quiz platform! Explore quizzes in Physics, Geography,
+                        and Architecture to challenge yourself and learn something new. From natural laws to world landmarks
+                        and architectural wonders, there's a quiz for everyone. Track your progress and have fun learning!
                     </p>
                     <p>
                         <strong>

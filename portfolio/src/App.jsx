@@ -2,7 +2,6 @@ import './App.css';
 import NavBar from "./content/NavBar";
 import Profile from "./content/Profile";
 import Projects from "./content/Projects";
-import Experience from "./content/Experience";
 import Contact from "./content/Contact";
 
 function App() {
@@ -16,7 +15,6 @@ function App() {
             <NavBar />
             <Profile />
             <Projects />
-            <Experience />
             <Contact />
         </>);
     }

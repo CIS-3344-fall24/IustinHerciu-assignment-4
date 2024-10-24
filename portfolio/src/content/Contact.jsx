@@ -1,5 +1,11 @@
 import React, { useRef, useState } from 'react';    // Import hooks from React
 import emailjs from '@emailjs/browser';             // Import emailjs for sending form data via email
+import {FaSquareGithub} from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
+import { FaInstagramSquare } from "react-icons/fa";
+
+
+
 
 export default function Contact() {
     /**
@@ -39,10 +45,25 @@ export default function Contact() {
         <section className="contact" id="contact">
             <h2 className="heading">Contact <span>ME</span></h2>
 
+            {/* Icons with links */}
+            <div className={"icons"}>
+                <a href={"https://github.com/iustinherciu2000"} target={"_blank"} rel="noreferrer">
+                    <FaSquareGithub icon={FaSquareGithub}/>
+                </a>
+
+                <a href={"https://www.linkedin.com/in/iustin-herciu-193446305/"} target={"_blank"} rel="noreferrer">
+                    <FaLinkedin/>
+                </a>
+
+                <a href={"https://www.instagram.com/iustin__lifts/"} target={"_blank"} rel="noreferrer">
+                    <FaInstagramSquare />
+                </a>
+            </div>
+
             <form ref={form} onSubmit={sendEmail}>
                 <div className="input-box">
                     <input type={"text"}
-                            name={"to_name"}
+                           name={"to_name"}
                            placeholder={"Full Name"}/>
                 </div>
 
