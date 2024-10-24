@@ -19,46 +19,62 @@ export default function Projects() {
                         <strong>Tech Style: Java</strong>
                     </p>
                     {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                    <a href="https://github.com/iustinherciu2000/BlackJack" className="btn" target={"_blank"} rel="noreferrer">GitHub Link</a>
+                    <a href="https://github.com/iustinherciu2000/BlackJack" className="btn" target={"_blank"}
+                       rel="noreferrer">GitHub Link</a>
                 </div>
                 <div className="projects-box">
                     <i className='bx bx-code-alt'></i>
-                    <h3>Add Project Name</h3>
+                    <h3>Olympic Silver Medalists</h3>
                     <p>
-
+                        Created an application that shows the user the top 15 Silver Medalists at the 2024 Paris
+                        Olympics.
+                        Then the user is able to click on an image and will get the name and a description of the
+                        athlete.
+                    </p>
+                    <p>
+                        <strong>
+                            Tech Style: Android Studio(Kotlin)
+                        </strong>
                     </p>
                     {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                    <a href="#" className="btn">Read More</a>
+                    <a href="https://github.com/TempleCIS3515/assignment-4-iustinherciu2000" className="btn">GitHub
+                        Link</a>
                 </div>
                 <div className="projects-box">
                     <i className='bx bx-code-alt'></i>
-                    <h3>Add Project Name</h3>
+                    <h3>Knowledge Quiz</h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Beatae consectetur doloremque dolorum minima nihil odit quis
-                        recusandae reprehenderit vel voluptatem!</p>
+                        Test your knowledge with our interactive quiz platform!
+                        Dive into exciting quizzes across Physics, Geography, and Architecture to challenge
+                        your understanding and learn something new. Whether you're exploring
+                        the laws of nature, discovering world landmarks, or analyzing architectural marvels,
+                        there's a quiz for every curious mind. Sharpen your skills, track your progress,
+                        and have fun while learning!
+                    </p>
+                    <p>
+                        <strong>
+                            Tech Style: HTML, CSS, Javascript
+                        </strong>
+                    </p>
                     {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                    <a href="#" className="btn">Read More</a>
+                    <a href="https://github.com/CIS-3344-fall24/IustinHerciu-project-MS1" className="btn">GitHub
+                        Link</a>
                 </div>
                 <div className="projects-box">
                     <i className='bx bx-code-alt'></i>
-                    <h3>Add Project Name</h3>
+                    <h3>SignUpForm App</h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Beatae consectetur doloremque dolorum minima nihil odit quis
-                        recusandae reprehenderit vel voluptatem!</p>
-                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                    <a href="#" className="btn">Read More</a>
-                </div>
-                <div className="projects-box">
-                    <i className='bx bx-code-alt'></i>
-                    <h3>Add Project Name</h3>
+                        Created an application that collects a user’s name, email, program, a password, and a password
+                        confirmation. It displays a message containing the user’s name, welcoming
+                        them to the app. e.g. “Welcome, Jayne Dough, to the SignUpForm App”.
+                    </p>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Beatae consectetur doloremque dolorum minima nihil odit quis
-                        recusandae reprehenderit vel voluptatem!</p>
+                        <strong>
+                            Tech Style: Android Studio(Kotlin)
+                        </strong>
+                    </p>
                     {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                    <a href="#" className="btn">Read More</a>
+                    <a href="https://github.com/TempleCIS3515/assignment-2-iustinherciu2000" className="btn">GitHub Link</a>
                 </div>
             </div>
         </section>
