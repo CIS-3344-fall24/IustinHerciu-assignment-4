@@ -60,42 +60,42 @@ export default function Contact() {
                     </a>
                 </div>
             </Fade>
-            <Fade direction={"left"} triggerOnce={true} damping={.5}>
+
                 <form ref={form} onSubmit={sendEmail}>
-                    <div className="input-box">
-                        <input type={"text"}
-                               name={"to_name"}
-                               placeholder={"Full Name"}/>
-                    </div>
+                    <Fade direction={"left"} triggerOnce={true} damping={.5}>
+                        <div className="input-box">
+                            <input type={"text"}
+                                   name={"to_name"}
+                                   placeholder={"Full Name"}/>
+                        </div>
 
-                    <div className="input-box">
-                        <input type={"email"}
-                               name={"from_name"}
-                               placeholder={"Email Address"}
-                               required/>
-                    </div>
+                        <div className="input-box">
+                            <input type={"email"}
+                                   name={"from_name"}
+                                   placeholder={"Email Address"}
+                                   required/>
+                        </div>
 
-                    <div className="input-box">
-                        <input type={"text"}
-                               name={"subject"}
-                               placeholder={"Email Subject"}/>
-                    </div>
+                        <div className="input-box">
+                            <input type={"text"}
+                                   name={"subject"}
+                                   placeholder={"Email Subject"}/>
+                        </div>
 
-                    <div className="input-box">
-                        <textarea name={"message"}
-                                  cols="30"
-                                  rows="10"
-                                  placeholder={"Your Message"}>
-                        </textarea>
-                    </div>
+                        <div className="input-box">
+                            <textarea name={"message"}
+                                      cols="30"
+                                      rows="10"
+                                      placeholder={"Your Message"}>
+                            </textarea>
+                        </div>
+                    </Fade>
 
                     {/* Conditionally render the success message */}
                     {messageSent && <p className="success-message">Your message has been sent successfully!</p>}
-
                     <input type={"submit"} value="Send Message" className={"btn"}/>
-
+                    
                 </form>
-            </Fade>
 
             <Fade direction={"down"} triggerOnce={true} damping={.5}>
                 <footer className="footer">
