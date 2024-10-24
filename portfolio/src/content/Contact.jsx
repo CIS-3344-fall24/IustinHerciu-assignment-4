@@ -3,8 +3,7 @@ import emailjs from '@emailjs/browser';             // Import emailjs for sendin
 import {FaSquareGithub} from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
-
-
+import {Fade} from "react-awesome-reveal";
 
 
 export default function Contact() {
@@ -43,63 +42,68 @@ export default function Contact() {
 
     return (
         <section className="contact" id="contact">
-            <h2 className="heading">Contact <span>ME</span></h2>
+            <Fade direction={"up"} triggerOnce={true} damping={.5}>
+                <h2 className="heading">Contact <span>ME</span></h2>
 
-            {/* Icons with links */}
-            <div className={"icons"}>
-                <a href={"https://github.com/iustinherciu2000"} target={"_blank"} rel="noreferrer">
-                    <FaSquareGithub className={"icon"}/>
-                </a>
+                {/* Icons with links */}
+                <div className={"icons"}>
+                    <a href={"https://github.com/iustinherciu2000"} target={"_blank"} rel="noreferrer">
+                        <FaSquareGithub className={"icon"}/>
+                    </a>
 
-                <a href={"https://www.linkedin.com/in/iustin-herciu-193446305/"} target={"_blank"} rel="noreferrer">
-                    <FaLinkedin className={"icon"}/>
-                </a>
+                    <a href={"https://www.linkedin.com/in/iustin-herciu-193446305/"} target={"_blank"} rel="noreferrer">
+                        <FaLinkedin className={"icon"}/>
+                    </a>
 
-                <a href={"https://www.instagram.com/iustin__lifts/"} target={"_blank"} rel="noreferrer">
-                    <FaInstagramSquare className={"icon"}/>
-                </a>
-            </div>
-
-            <form ref={form} onSubmit={sendEmail}>
-                <div className="input-box">
-                    <input type={"text"}
-                           name={"to_name"}
-                           placeholder={"Full Name"}/>
+                    <a href={"https://www.instagram.com/iustin__lifts/"} target={"_blank"} rel="noreferrer">
+                        <FaInstagramSquare className={"icon"}/>
+                    </a>
                 </div>
+            </Fade>
+            <Fade direction={"left"} triggerOnce={true} damping={.5}>
+                <form ref={form} onSubmit={sendEmail}>
+                    <div className="input-box">
+                        <input type={"text"}
+                               name={"to_name"}
+                               placeholder={"Full Name"}/>
+                    </div>
 
-                <div className="input-box">
-                    <input type={"email"}
-                           name={"from_name"}
-                           placeholder={"Email Address"}
-                           required/>
-                </div>
+                    <div className="input-box">
+                        <input type={"email"}
+                               name={"from_name"}
+                               placeholder={"Email Address"}
+                               required/>
+                    </div>
 
-                <div className="input-box">
-                    <input type={"text"}
-                           name={"subject"}
-                           placeholder={"Email Subject"}/>
-                </div>
+                    <div className="input-box">
+                        <input type={"text"}
+                               name={"subject"}
+                               placeholder={"Email Subject"}/>
+                    </div>
 
-                <div className="input-box">
-                    <textarea name={"message"}
-                              cols="30"
-                              rows="10"
-                              placeholder={"Your Message"}>
-                    </textarea>
-                </div>
+                    <div className="input-box">
+                        <textarea name={"message"}
+                                  cols="30"
+                                  rows="10"
+                                  placeholder={"Your Message"}>
+                        </textarea>
+                    </div>
 
-                {/* Conditionally render the success message */}
-                {messageSent && <p className="success-message">Your message has been sent successfully!</p>}
+                    {/* Conditionally render the success message */}
+                    {messageSent && <p className="success-message">Your message has been sent successfully!</p>}
 
-                <input type={"submit"} value="Send Message" className={"btn"}/>
+                    <input type={"submit"} value="Send Message" className={"btn"}/>
 
-            </form>
+                </form>
+            </Fade>
 
-            <footer className="footer">
-                <div className="footer-text">
-                    <p>Copyright &copy; 2024 by Iustin Herciu | All Rights Reserved.</p>
-                </div>
-            </footer>
+            <Fade direction={"down"} triggerOnce={true} damping={.5}>
+                <footer className="footer">
+                    <div className="footer-text">
+                        <p>Copyright &copy; 2024 by Iustin Herciu | All Rights Reserved.</p>
+                    </div>
+                </footer>
+            </Fade>
         </section>
     );
 }

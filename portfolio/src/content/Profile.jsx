@@ -1,7 +1,7 @@
 import profilePic from './images/profilePic.png'
-// import `useEffects` and typed.js for text animations
 import React, {useEffect} from "react";
 import Typed from "typed.js";
+import { Fade } from "react-awesome-reveal"
 
 export default function Profile() {
 
@@ -25,19 +25,25 @@ export default function Profile() {
     return (
         <section className="home">
             <div className="home-content">
-                <h3>Hello, My name is</h3>
-                <h1>Iustin Herciu</h1>
-                <h3>And I am a <span className="multiple-text"></span></h3>
-                <p>I am currently majoring in <span>Information Science and Technology B.S.</span></p>
-                <p>My goal is to become a Software Engineer once I graduate and get my Bachelor of Science Degree.</p>
+                <Fade direction={"left"} triggerOnce={true} damping={.5}>
+                    <h3>Hello, My name is</h3>
+                    <h1>Iustin Herciu</h1>
+                    <h3>And I am a <span className="multiple-text"></span></h3>
+                    <p>I am currently majoring in <span>Information Science and Technology B.S.</span></p>
+                    <p>My goal is to become a Software Engineer once I graduate and get my Bachelor of Science Degree.</p>
+                </Fade>
 
                 {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                <a href="/Resume.pdf" className="btn" download={"Resume.pdf"}>Download Resume</a>
+                <Fade direction={"left"} triggerOnce={true} damping={.5}>
+                    <a href="/Resume.pdf" className="btn" download={"Resume.pdf"}>Download Resume</a>
+                </Fade>
             </div>
 
             <div className="profile-img">
-                {/* eslint-disable-next-line jsx-a11y/img-redundant-alt */}
-                <img src={profilePic} alt="Profile"/>
+                <Fade direction={"right"} triggerOnce={true} damping={.5}>
+                    {/* eslint-disable-next-line jsx-a11y/img-redundant-alt */}
+                    <img src={profilePic} alt="Profile"/>
+                </Fade>
             </div>
 
         </section>

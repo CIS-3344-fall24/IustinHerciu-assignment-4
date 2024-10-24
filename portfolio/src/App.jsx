@@ -9,7 +9,6 @@ function App() {
     // use `window.location`
     // console.log(window.location);
 
-
     return (
         <>
             <NavBar />
