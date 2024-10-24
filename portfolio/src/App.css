@@ -162,13 +162,14 @@ span {
 .projects-container .projects-box {
     flex: 1 1 30rem;
     background: var(--second-bg-color);
-    padding: 3rem 2rem 4rem;
+    padding: 7rem 3rem 9rem;
     border-radius: 2rem;
     text-align: center;
     border: .2rem solid var(--bg-color);
     transition: .5s ease;
+    height: 45rem; /* Fixed height to ensure uniform box size */
+    overflow: hidden; /* Hide overflow if the content is too long */
 }
-
 .projects-container .projects-box:hover {
     border-collapse: var(--main-color);
     transform: scale(1.02);
@@ -188,11 +189,13 @@ span {
 }
 
 .projects-box h3 {
-    font-size: 2.6rem;
+    margin-top: -2rem;
+    font-size: 2.5rem;
+    padding-bottom: 1.5rem;
 }
 
 .projects-box p {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     margin: 1rem 0 3rem;
 }
 
@@ -200,11 +203,27 @@ span {
     margin-bottom: 3rem;
 }
 
+.icons {
+    display: flex; /* Align icons horizontally */
+    justify-content: center; /* Center the icons horizontally */
+    gap: 2rem; /* Add space between icons */
+    margin-top: 2rem; /* Adjust as needed */
+}
+
+.icon {
+    font-size: 3.5rem; /* Increase the size of the icons */
+    color: white; /* Set the color to navy or a dark shade */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.icon:hover {
+    color: var(--main-color); /* Add a hover effect with your main color */
+}
+
 .contact form {
     max-width: 70rem;
-    margin: 1rem auto;
     text-align: center;
-    margin-bottom: 3rem;
+    margin: 1rem auto 3rem;
 }
 
 .contact form .input-box {
@@ -232,3 +251,19 @@ span {
     margin-top: 2rem;
     cursor: pointer;
 }
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: transparent;
+}
+
+.footer text p{
+    font-size: 1.6rem;
+}
+
+
+
+
+

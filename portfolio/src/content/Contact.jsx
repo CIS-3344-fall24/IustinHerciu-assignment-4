@@ -48,15 +48,15 @@ export default function Contact() {
             {/* Icons with links */}
             <div className={"icons"}>
                 <a href={"https://github.com/iustinherciu2000"} target={"_blank"} rel="noreferrer">
-                    <FaSquareGithub icon={FaSquareGithub}/>
+                    <FaSquareGithub className={"icon"}/>
                 </a>
 
                 <a href={"https://www.linkedin.com/in/iustin-herciu-193446305/"} target={"_blank"} rel="noreferrer">
-                    <FaLinkedin/>
+                    <FaLinkedin className={"icon"}/>
                 </a>
 
                 <a href={"https://www.instagram.com/iustin__lifts/"} target={"_blank"} rel="noreferrer">
-                    <FaInstagramSquare />
+                    <FaInstagramSquare className={"icon"}/>
                 </a>
             </div>
 
@@ -94,6 +94,12 @@ export default function Contact() {
                 <input type={"submit"} value="Send Message" className={"btn"}/>
 
             </form>
+
+            <footer className="footer">
+                <div className="footer-text">
+                    <p>Copyright &copy; 2024 by Iustin Herciu | All Rights Reserved.</p>
+                </div>
+            </footer>
         </section>
     );
 }
