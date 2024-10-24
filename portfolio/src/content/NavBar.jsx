@@ -72,7 +72,7 @@ export default function NavBar() {
                 <ul>
                     {/* Store each <li> element in linkRef at the correct index */}
                     <li className="active">
-                        <a href="#profile">
+                        <a href="#top">     {/* Use 'top' to go back to the top of the page */}
                             Profile
                         </a>
                     </li>
